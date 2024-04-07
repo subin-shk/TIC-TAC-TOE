@@ -8,7 +8,7 @@
 .cell{
     width: 75px;
     height: 75px;
-    border: 1px solid #fff;
+    border: 3px solid #fff;
     
     line-height: 75px;
     font-size: 50px;
@@ -31,8 +31,8 @@
     gap:30px;
     justify-content: center;
     align-items: center;
-    margin-top: 120px;
-    
+    /* margin-top: 90px; */
+    position: relative;
 }
 
 #cellContainer{
@@ -55,4 +55,12 @@
 #restartBtn:hover{
     transform: translateY(-4px);
     background-color: #0e111f;
+}
+
+.line{
+    width:0;
+    height: 5px;
+    background-color: #fff;
+    position: absolute;
+    transition: width 1s ease-in-out;
 }
