@@ -32,17 +32,20 @@ function cellClicked(){
     }
 
     updateCell(this, cellIndex);
+    playercolor(this, cellIndex);
     checkWinner();
 }
 
 function updateCell(cell, index){
     options[index] = currentPlayer;
     cell.textContent = currentPlayer;
+    
 }
 
 function changePlayer(){
     currentPlayer=(currentPlayer=="X") ? "O" : "X";
     statusText.textContent=`${currentPlayer}'s turn`;
+
 }
 
 function checkWinner(){
@@ -86,4 +89,22 @@ function restartGame(){
     statusText.textContent=`${currentPlayer}'s turn`;
     cells.forEach(cell=>cell.textContent="");
     running=true;
+}
+
+function playercolor(cell, index){
+    // cells.forEach(cell=>cell.textContent="");
+    
+    if(currentPlayer=="X"){
+        for(cellIndex in cells){
+            cells.forEach(cellIndex=>cell.style.color = "red");
+            // document.querySelector(".cell").style.color = "red";
+        }
+    }
+    else if(currentPlayer=="O"){
+        for(cellIndex in cells){
+            cells.forEach(cellIndex=>cell.style.color = "blue");
+            // document.querySelector(".cell").style.color = "blue";
+        }
+    }
+    
 }
