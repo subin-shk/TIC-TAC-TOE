@@ -1,6 +1,11 @@
 const cells = document.querySelectorAll(".cell");
 const statusText = document.querySelector("#statusText");
 const restartBtn= document.querySelector("#restartBtn");
+const clickSound = document.getElementById("click");
+const winSound = document.getElementById("winsound");
+const drawSound = document.getElementById("draw");
+
+
 const winConditions=[
     [0 , 1, 2],
     [3, 4, 5],
@@ -12,7 +17,7 @@ const winConditions=[
     [2, 4, 6]
 ];
 const winline=[
-    [1, -110, 0],
+    [1, -115, 0],
     [0, -35, 0],
     [0, 45, 0],
     [-80, -30, 90],
@@ -31,7 +36,7 @@ initializeGame();
 function initializeGame(){
     cells.forEach(cell=>cell.addEventListener("click",cellClicked));
     restartBtn.addEventListener("click",restartGame);
-    statusText.textContent = `${currentPlayer}'s turn...`;
+    statusText.textContent = `Player ${currentPlayer}'s turn...`;
     running=true;
 }
 
@@ -45,6 +50,7 @@ function cellClicked(){
     updateCell(this, cellIndex);
     playercolor(this, cellIndex);
     checkWinner();
+    playSound()
 }
 
 function updateCell(cell, index){
@@ -55,7 +61,7 @@ function updateCell(cell, index){
 
 function changePlayer(){
     currentPlayer=(currentPlayer=="X") ? "O" : "X";
-    statusText.textContent=`${currentPlayer}'s turn...`;
+    statusText.textContent=`Player ${currentPlayer}'s turn...`;
 
 }
 
@@ -81,16 +87,17 @@ function checkWinner(){
     }
 
     if(roundWon){
-        statusText.textContent=`${currentPlayer} wins!`;
+        statusText.textContent=`Player ${currentPlayer} wins! 🎉`;
         document.querySelector(".line").style.width="320px";
         
-        
+        playWinSound();
         
         running=false;
     }
 
     else if(!options.includes("")){
         statusText.textContent=`Draw!`;
+        playDrawSound(); 
         running=false;
     }
     else{
@@ -136,7 +143,7 @@ function restartGame(){
     currentPlayer="X";
     options=["","","","","","","","",""];
     document.querySelector(".line").style.width="0px";
-    statusText.textContent=`${currentPlayer}'s turn`;
+    statusText.textContent=`Player ${currentPlayer}'s turn...`;
     cells.forEach(cell=>cell.textContent="");
     
     running=true;
@@ -163,3 +170,15 @@ function playercolor(cell, index){
     }
     
 }
+
+function playSound() {
+    click.play();
+}
+
+function playWinSound() {
+    winsound.play();
+}
+
+function playDrawSound() {
+    draw.play();
+} 
