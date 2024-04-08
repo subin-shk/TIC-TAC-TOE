@@ -36,7 +36,7 @@ initializeGame();
 function initializeGame(){
     cells.forEach(cell=>cell.addEventListener("click",cellClicked));
     restartBtn.addEventListener("click",restartGame);
-    statusText.textContent = `Player ${currentPlayer}'s turn...`;
+    statusText.textContent = `Player ${currentPlayer}'s turn... 🧐`;
     running=true;
 }
 
@@ -61,7 +61,7 @@ function updateCell(cell, index){
 
 function changePlayer(){
     currentPlayer=(currentPlayer=="X") ? "O" : "X";
-    statusText.textContent=`Player ${currentPlayer}'s turn...`;
+    statusText.textContent=`Player ${currentPlayer}'s turn... 🧐`;
 
 }
 
@@ -96,11 +96,11 @@ function checkWinner(){
     }
 
     else if(!options.includes("")){
-        statusText.textContent=`Draw 🙄`;
+        statusText.textContent=`Draw... 🥲`;
         playDrawSound(); 
         running=false;
     }
-    else{
+    else{ 
         changePlayer();
     }
 }
@@ -143,7 +143,7 @@ function restartGame(){
     currentPlayer="X";
     options=["","","","","","","","",""];
     document.querySelector(".line").style.width="0px";
-    statusText.textContent=`Player ${currentPlayer}'s turn...`;
+    statusText.textContent=`Player ${currentPlayer}'s turn... 🧐`;
     cells.forEach(cell=>cell.textContent="");
     
     running=true;

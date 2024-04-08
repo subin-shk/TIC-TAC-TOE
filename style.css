@@ -1,5 +1,7 @@
 *{
-    background-color: #03071a;
+   
+    background-color: #2C3333;
+    /* background-color: #343434; */
     color: #fff;
     font-family: "Permanent Marker", cursive;
     font-weight: 100;
@@ -7,6 +9,9 @@
     cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Uwu_and_OwOCursor.png) , default !important;
 }
 
+.gameContainer h1{
+    border-bottom: 2px solid #fff;
+}
 
 .cell{
     width: 75px;
