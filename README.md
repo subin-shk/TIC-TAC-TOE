@@ -12,5 +12,12 @@
   <li>CSS</li>
   <li>Javascript</li>
 </ul>
-
+<h1>🤔 How Can It Be Improved?</h1>
+At the moment, the game can only be played by two players in same device. The project could be improved by adding a single-player feature where a player can play alone with the computer.
+<p></p>
 <h1>🎥 Demo</h1>
+<p>Play Now: https://tic-tac-toe-sigma-olive.vercel.app/</p>
+
+
+https://github.com/subin-shk/Tic-Tac-Toe-using-Vanilla-js/assets/162704899/931f1e89-269f-4803-8ff6-1194b7ad5040
+
