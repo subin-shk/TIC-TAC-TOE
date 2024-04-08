@@ -1,9 +1,12 @@
 *{
     background-color: #03071a;
     color: #fff;
-    font-family:  cursive;
+    font-family: "Permanent Marker", cursive;
     font-weight: 100;
+    font-style: normal;
+    cursor: url(https://cdn.custom-cursor.com/db/cursor/32/Uwu_and_OwOCursor.png) , default !important;
 }
+
 
 .cell{
     width: 75px;
@@ -12,9 +15,7 @@
     border-bottom: 4px solid #fff;
     line-height: 75px;
     font-size: 50px;
-    cursor: pointer;
-    
-    
+    cursor: url(https://cdn.custom-cursor.com/db/pointer/32/Uwu_and_OwOPointer.png)   , pointer !important;
 }
 
 .cell:nth-child(3n){

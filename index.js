@@ -96,7 +96,7 @@ function checkWinner(){
     }
 
     else if(!options.includes("")){
-        statusText.textContent=`Draw!`;
+        statusText.textContent=`Draw 🙄`;
         playDrawSound(); 
         running=false;
     }
