@@ -8,8 +8,8 @@
 .cell{
     width: 75px;
     height: 75px;
-    border: 3px solid #fff;
-    
+    border-right: 4px solid #fff;
+    border-bottom: 4px solid #fff;
     line-height: 75px;
     font-size: 50px;
     cursor: pointer;
@@ -17,7 +17,13 @@
     
 }
 
+.cell:nth-child(3n){
+    border-right: none;
+}
 
+.cell:nth-child(6) ~ .cell{
+    border-bottom: none;
+}
 
 .cell:hover{
     background-color: #b5b2f7, transparent;
@@ -28,7 +34,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap:30px;
+    gap:40px;
     justify-content: center;
     align-items: center;
     /* margin-top: 90px; */
@@ -42,6 +48,7 @@
     border-radius: 8px;
     width: 232px;
     margin: auto;
+    
 }
 
 #restartBtn{
@@ -50,6 +57,7 @@
     border: 2px solid #fff;
     border-radius: 8px;
     font-size: 24px;
+    box-shadow: 3px 4px 4px #646464;
 }
 
 #restartBtn:hover{
@@ -60,7 +68,10 @@
 .line{
     width:0;
     height: 5px;
-    background-color: #fff;
+    background-color: #ffffff;
+    filter: drop-shadow(5px 5px 5px #fff);
+    border-radius: 10px;
     position: absolute;
     transition: width 1s ease-in-out;
 }
+

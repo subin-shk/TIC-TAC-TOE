@@ -146,13 +146,17 @@ function playercolor(cell, index){
     
     if(currentPlayer=="X"){
         
-            cells.forEach(cellIndex=>cell.style.color = "red");
-            // document.querySelector(".cell").style.color = "red";
+            cells.forEach(cellIndex=>cell.style.color = "#FF3939");
+           
+            cells.forEach(cellIndex=>cell.style.textShadow= "2px 4px 5px #FFCEDF");
+
         
     }
     else if(currentPlayer=="O"){
         
-            cells.forEach(cellIndex=>cell.style.color = "blue");
+            cells.forEach(cellIndex=>cell.style.color = "#397EFF");
+            cells.forEach(cellIndex=>cell.style.textShadow= "2px 4px 5px #CEFFFA");
+            
             // document.querySelector(".cell").style.color = "blue";
         
     }
