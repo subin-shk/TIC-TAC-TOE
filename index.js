@@ -98,29 +98,35 @@ function checkWinner(){
 }
 
 function drawline(){
-    let j=0;
-    // for(i=0;i<winline.length;i++){
-        
-        for(j ; j<winline.length; j++){
-    // while(j<winline.length){
-        const e=winline[j];
-        // const l1=options[e[0]];
-        // const l2=options[e[1]];
-        // const l3=options[e[2]];
-        document.querySelector(".line").style.transform=`translate(${e[0]}px,${e[1]}px) rotate(${e[2]}deg)`
-        // j++;
-        break;
-        }
-    // while(j<winline.length){
-    //     const e=winline[j];
-    //             document.querySelector(".line").style.transform=`translate(${e[0]}px,${e[1]}px) rotate(${e[2]}deg)`
-    // // j++;
-    // break;
-    // }
-    // console.log(j);
-    //     j++;
 
-    // }
+    const lineDiv = document.querySelector(".line");
+
+    // Find the index of the winning condition
+    let winIndex = -1;
+    for (let i = 0; i < winConditions.length; i++) {
+        const condition = winConditions[i];
+        const cellA = options[condition[0]];
+        const cellB = options[condition[1]];
+        const cellC = options[condition[2]];
+
+        if (cellA != "" && cellA === cellB && cellB === cellC) {
+            winIndex = i;
+            break;
+        }
+    }
+
+    // If a winning condition is found, draw the line
+    if (winIndex !== -1) {
+        const transformation = winline[winIndex];
+        applyTransformation(transformation);
+    }
+}
+
+// Function to apply transformation to the div
+function applyTransformation(transformation) {
+    const lineDiv = document.querySelector(".line");
+    lineDiv.style.transform = `translate(${transformation[0]}px, ${transformation[1]}px) rotate(${transformation[2]}deg)`;
+
 
 }
 
