@@ -25,12 +25,13 @@ let options=["","","","","","","","",""];
 let currentPlayer="X";
 let running=false;
 
+
 initializeGame();
 
 function initializeGame(){
     cells.forEach(cell=>cell.addEventListener("click",cellClicked));
     restartBtn.addEventListener("click",restartGame);
-    statusText.textContent = `${currentPlayer}'s turn`;
+    statusText.textContent = `${currentPlayer}'s turn...`;
     running=true;
 }
 
@@ -54,7 +55,7 @@ function updateCell(cell, index){
 
 function changePlayer(){
     currentPlayer=(currentPlayer=="X") ? "O" : "X";
-    statusText.textContent=`${currentPlayer}'s turn`;
+    statusText.textContent=`${currentPlayer}'s turn...`;
 
 }
 
@@ -146,16 +147,16 @@ function playercolor(cell, index){
     
     if(currentPlayer=="X"){
         
-            cells.forEach(cellIndex=>cell.style.color = "#FF3939");
+            // cells.forEach(cellIndex=>cell.style.color = "#FF3939");
            
-            cells.forEach(cellIndex=>cell.style.textShadow= "2px 4px 5px #FFCEDF");
+            cells.forEach(cellIndex=>cell.style.textShadow= "2px 2px 5px red");
 
         
     }
     else if(currentPlayer=="O"){
         
-            cells.forEach(cellIndex=>cell.style.color = "#397EFF");
-            cells.forEach(cellIndex=>cell.style.textShadow= "2px 4px 5px #CEFFFA");
+            // cells.forEach(cellIndex=>cell.style.color = "#397EFF");
+            cells.forEach(cellIndex=>cell.style.textShadow= "2px 2px 5px blue");
             
             // document.querySelector(".cell").style.color = "blue";
         
