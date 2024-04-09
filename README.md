@@ -1,6 +1,6 @@
 <h1>🔢 Tic-Tac-Toe</h1>
 <p>Tic Tac Toe game built with HTML, CSS and JavaScript</p>
-<p>Take a peek: https://tic-tac-toe-sigma-olive.vercel.app/</p>
+<p>Take a peek: tic-tac-toe-by-subin-sigma-olive.vercel.app/</p>
 
 <h1>✨ About this project</h1>
 <p>The game is played by two players. Staring from Player X, the player choose the cell to mark, followed by Player O who marks another cell accordingly.</p>
@@ -16,7 +16,7 @@
 At the moment, the game can only be played by two players in same device. The project could be improved by adding a single-player feature where a player can play alone with the computer.
 <p></p>
 <h1>🎥 Demo</h1>
-<p>Play Now: https://tic-tac-toe-sigma-olive.vercel.app/</p>
+<p>Play Now: tic-tac-toe-by-subin-sigma-olive.vercel.app/</p>
 
 
 https://github.com/subin-shk/Tic-Tac-Toe-using-Vanilla-js/assets/162704899/931f1e89-269f-4803-8ff6-1194b7ad5040
